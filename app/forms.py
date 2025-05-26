@@ -1,7 +1,5 @@
 from django import forms
 from .models import Livro
-# from crispy_forms.helper import FormHelper
-# from crispy_forms.layout import Layout, Submit
 
 class LivroForm(forms.ModelForm):
     class Meta:
@@ -12,7 +10,7 @@ class LivroForm(forms.ModelForm):
         super(LivroForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.layout = Layout(
-            'nome',
+            'titulo',
             'autor',
             'editora',
             'genero',
